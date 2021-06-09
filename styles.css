@@ -1,0 +1,31 @@
+body{
+
+    background-color: darkred;
+    color: wheat;
+}
+
+#heading{
+    text-align: center;
+    margin-top: 3%;
+    font-size: 50px;
+}
+
+#rules{
+    text-align: center;
+    font-size: 30px;
+}
+
+#player{
+    margin-left: 36%;
+    margin-top: 3%;
+    font-size: 30px;
+    display: inline;
+}
+
+#computer{
+    margin-left: 10%;
+    font-size: 30px;
+    display: inline;
+}
+
+
