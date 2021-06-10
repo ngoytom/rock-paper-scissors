@@ -11,8 +11,8 @@ function playRound(clicked_id){
     let playerChoice = clicked_id;
     let computerChoice = computerPlay();
 
-    //Display Player Side
-    if (playerChoice == "rock"){
+     //Display Player Side
+     if (playerChoice == "rock"){
         playerChoice = 0;
         document.getElementById("playerchoice").src = "https://lh3.googleusercontent.com/proxy/BQ8riHH5dQTwXK_dv5sk5rG-6TSmDTRTX9mmNRIG83mhZCH_YBBY_F4G403HZ7e6RCrLIFVlwnW6NfUesinK2DGDCOrrktU";
     }
@@ -35,28 +35,24 @@ function playRound(clicked_id){
     else if (computerChoice == 2){
         document.getElementById("computerchoice").src = "http://www.clker.com/cliparts/7/d/N/6/X/o/scissor-hand.svg";
     }
-
+    
     let winner = calcWinner(playerChoice, computerChoice);
     document.getElementById("rules").innerHTML = "Best of 5";
     
     //Updates Score
-    if (winner == 0 && computerscore < 3){
+    if (winner == 0){
         computerscore++;
         document.getElementById("computerscore").innerHTML = "Computer: " + computerscore;
-        if (computerscore == 3){
-            alert("Computer wins! Press F5 to play again!")
-        }
     }
     else if (winner == 1){
         document.getElementById("rules").innerHTML = "Round Tie!!!";
     }
-    else if (winner == 2 && playerscore < 3){
+    else if (winner == 2){
         playerscore++;
         document.getElementById("playerscore").innerHTML = "Player: " + playerscore;
-        if (playerscore == 3){
-            alert("Player wins! Press F5 to play again!")
-        }
     }
+
+    checkWinner(playerscore, computerscore);
 }
 
 /**
@@ -76,4 +72,20 @@ function calcWinner(playerChoice, computerChoice){
     else{
         return 2;
     }
+}
+
+function checkWinner(playerScore, computerScore){
+    if (computerScore == 3){
+        alert("Computer wins! Press F5 to play again!")
+        document.getElementById("rock").disabled = true;
+        document.getElementById("paper").disabled = true;
+        document.getElementById("scissors").disabled = true;
+    }
+    if (playerScore == 3){
+        alert("Player wins! Press F5 to play again!")
+        document.getElementById("rock").disabled = true;
+        document.getElementById("paper").disabled = true;
+        document.getElementById("scissors").disabled = true;
+    }
+    
 }
