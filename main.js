@@ -1,4 +1,6 @@
-const options = [0, 1, 2]
+const options = [0, 1, 2];
+let playerscore = 0;
+let computerscore = 0;
 
 function computerPlay(){
     let choice = Math.floor(Math.random() * options.length); 
@@ -9,6 +11,7 @@ function playRound(clicked_id){
     let playerChoice = clicked_id;
     let computerChoice = computerPlay();
 
+    //Display Player Side
     if (playerChoice == "rock"){
         playerChoice = 0;
         document.getElementById("playerchoice").src = "https://lh3.googleusercontent.com/proxy/BQ8riHH5dQTwXK_dv5sk5rG-6TSmDTRTX9mmNRIG83mhZCH_YBBY_F4G403HZ7e6RCrLIFVlwnW6NfUesinK2DGDCOrrktU";
@@ -22,6 +25,7 @@ function playRound(clicked_id){
         document.getElementById("playerchoice").src = "http://www.clker.com/cliparts/7/d/N/6/X/o/scissor-hand.svg";
     }
     
+    //Display Computer Side
     if (computerChoice == 0){
         document.getElementById("computerchoice").src = "https://lh3.googleusercontent.com/proxy/BQ8riHH5dQTwXK_dv5sk5rG-6TSmDTRTX9mmNRIG83mhZCH_YBBY_F4G403HZ7e6RCrLIFVlwnW6NfUesinK2DGDCOrrktU";
     }
@@ -31,8 +35,28 @@ function playRound(clicked_id){
     else if (computerChoice == 2){
         document.getElementById("computerchoice").src = "http://www.clker.com/cliparts/7/d/N/6/X/o/scissor-hand.svg";
     }
+
     let winner = calcWinner(playerChoice, computerChoice);
-    console.log(winner);
+    document.getElementById("rules").innerHTML = "Best of 5";
+    
+    //Updates Score
+    if (winner == 0 && computerscore < 3){
+        computerscore++;
+        document.getElementById("computerscore").innerHTML = "Computer: " + computerscore;
+        if (computerscore == 3){
+            alert("Computer wins! Press F5 to play again!")
+        }
+    }
+    else if (winner == 1){
+        document.getElementById("rules").innerHTML = "Round Tie!!!";
+    }
+    else if (winner == 2 && playerscore < 3){
+        playerscore++;
+        document.getElementById("playerscore").innerHTML = "Player: " + playerscore;
+        if (playerscore == 3){
+            alert("Player wins! Press F5 to play again!")
+        }
+    }
 }
 
 /**
