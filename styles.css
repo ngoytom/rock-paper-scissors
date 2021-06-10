@@ -28,4 +28,26 @@ body{
     display: inline;
 }
 
+.options{
+    height: 150px;
+    width: 150px;
+    margin-top: 20%;
+    display: inline;
+}
+
+#rock{
+    background-color: white;
+    text-align: center;
+    margin-left: 34%;
+}
+
+#paper{
+    background-color: white;
+    margin-left: 2%;
+}
+
+#scissors{
+    background-color: white;
+    margin-left: 2%;
+}
 
