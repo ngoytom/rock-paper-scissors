@@ -28,10 +28,22 @@ body{
     display: inline;
 }
 
+.choice{
+    margin-top: 5%;
+}
+
+#playerchoice{
+    margin-left: 35%;
+}
+
+#computerchoice{
+    margin-left: 9%;
+}
+
 .options{
     height: 150px;
     width: 150px;
-    margin-top: 20%;
+    margin-top: 5%;
     display: inline;
 }
 
