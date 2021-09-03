@@ -17,6 +17,6 @@ Best of 5 Rock Paper Scissors game against Random Number Generated Bot
 - Smoother transitions between games
 
 ## [Live Demonstration](https://ngoytom.github.io/rock-paper-scissors/)
-![UI of app]()
+![UI of app](https://github.com/ngoytom/rock-paper-scissors/blob/main/capture.PNG?raw=true)
 
 
