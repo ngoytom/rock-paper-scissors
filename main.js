@@ -14,26 +14,26 @@ function playRound(clicked_id){
      //Display Player Side
      if (playerChoice == "rock"){
         playerChoice = 0;
-        document.getElementById("playerchoice").src = "https://lh3.googleusercontent.com/proxy/BQ8riHH5dQTwXK_dv5sk5rG-6TSmDTRTX9mmNRIG83mhZCH_YBBY_F4G403HZ7e6RCrLIFVlwnW6NfUesinK2DGDCOrrktU";
+        document.getElementById("playerchoice").src = "rock.png";
     }
     else if (playerChoice == "paper"){
         playerChoice = 1;
-        document.getElementById("playerchoice").src = "https://lh3.googleusercontent.com/proxy/yEzI3qFgTuwUNPmH8p66NCPgd1Wb5PHd9ZKypFiiaGpG5EwmTeGM2cA3YSm3wvJfR96Wwuv09ZIvKnIfGKyRT7yotzXP1kA";
+        document.getElementById("playerchoice").src = "paper.png";
     }
     else if (playerChoice == "scissors"){
         playerChoice = 2;
-        document.getElementById("playerchoice").src = "http://www.clker.com/cliparts/7/d/N/6/X/o/scissor-hand.svg";
+        document.getElementById("playerchoice").src = "scissors.png";
     }
     
     //Display Computer Side
     if (computerChoice == 0){
-        document.getElementById("computerchoice").src = "https://lh3.googleusercontent.com/proxy/BQ8riHH5dQTwXK_dv5sk5rG-6TSmDTRTX9mmNRIG83mhZCH_YBBY_F4G403HZ7e6RCrLIFVlwnW6NfUesinK2DGDCOrrktU";
+        document.getElementById("computerchoice").src = "rock.png";
     }
     else if (computerChoice == 1){
-        document.getElementById("computerchoice").src = "https://lh3.googleusercontent.com/proxy/yEzI3qFgTuwUNPmH8p66NCPgd1Wb5PHd9ZKypFiiaGpG5EwmTeGM2cA3YSm3wvJfR96Wwuv09ZIvKnIfGKyRT7yotzXP1kA";
+        document.getElementById("computerchoice").src = "paper.png";
     }
     else if (computerChoice == 2){
-        document.getElementById("computerchoice").src = "http://www.clker.com/cliparts/7/d/N/6/X/o/scissor-hand.svg";
+        document.getElementById("computerchoice").src = "scissors.png";
     }
     
     let winner = calcWinner(playerChoice, computerChoice);
